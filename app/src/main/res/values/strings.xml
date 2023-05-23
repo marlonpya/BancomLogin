@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BancomLogin</string>
+
+    <string name="wellcome">Bienvenido</string>
+    <string name="start_session">Inicia sesión</string>
+
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="not_remember_your_password">¿Olvidaste tu contraseña?</string>
+    <string name="remember_your_password">Recordar correo</string>
+
+    <string name="get_into">Ingresar</string>
+    <string name="get_into_google">Ingresar con google</string>
+</resources>
