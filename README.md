@@ -9,7 +9,5 @@ Proyecto para iniciar un proyecto con Clean Architecture y Jetpack Compose
 </p>
 
 <p align="center">  
-FoodApp utiliza Clean Architecture, Jetpack Compose, Corutinas, MVVM, LiveData y Material Design.
+BancomLoginApp utiliza Clean Architecture, Jetpack Compose, Corutinas, MVVM, LiveData y Material Design.
 </p>
-</br>
-</br>

@@ -20,11 +20,14 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.bancomlogin.Destination
 import com.example.bancomlogin.R
 
 
 @Composable
-fun LoginScreen(viewModel: LoginViewModel) = with(viewModel) {
+fun LoginScreen(navController: NavController,
+                viewModel: LoginViewModel) = with(viewModel) {
     Column(modifier = Modifier.padding(16.dp)) {
         Title()
         InputEmail(viewModel.email) {
@@ -40,7 +43,9 @@ fun LoginScreen(viewModel: LoginViewModel) = with(viewModel) {
             isCheckedRememberEmail
         ) { onCheckedRememberChanged(it) }
         Spacer(modifier = Modifier.weight(1.0f))
-        ButtonGetInto() {}
+        ButtonGetInto() {
+            navController.navigate(Destination.HOME)
+        }
         ButtonGetIntoGoogle() {}
     }
 }
@@ -195,11 +200,11 @@ private fun ButtonGetIntoGoogle(onClick: () -> Unit) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+private fun DefaultPreview() {
     Column(modifier = Modifier.padding(16.dp)) {
         Title()
-        InputEmail("email") { }
-        InputPassword("password", {}, false, {})
+        InputEmail("marlon.arteaga.m@hotmail.com") { }
+        InputPassword("123456", {}, false, {})
         NotRememberYourPassword {}
         RememberYourSession(false) {}
         Spacer(modifier = Modifier.weight(1.0f))
